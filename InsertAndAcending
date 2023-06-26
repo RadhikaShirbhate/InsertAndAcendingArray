@@ -1,0 +1,51 @@
+
+import java.util.Scanner;
+
+public class InsertAndAcending 
+{
+		public static void main(String[] args) 
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter the size of Array");
+			int size =sc.nextInt();
+			int a[]=new int[size+1];
+			System.out.println("Enter the elements of array");
+			for(int i=0;i<size;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			System.out.println("Enter the elements " );
+			int ele=sc.nextInt();
+			for(int i=0;i<size+1;i++)
+			{
+				a[size+1]=a[ele];
+			}
+			size++;
+			System.out.println("insert element new array is ");
+			for(int i=0;i<size;i++)
+			{
+				System.out.print(a[i]+" ");
+			}
+			System.out.println("\nAscending order :");
+			int temp=0;
+			for(int i=0;i<size+1;i++)
+			{
+				for(int j=0;j<size+1;j++)
+				{
+					if(a[i]>a[j])
+					{
+						temp=a[i];
+						a[i]=a[j];
+						a[j]=temp;
+					}
+				}
+			}
+			for(int i=0;i<a.length+1;i++)
+			{
+			   System.out.println(temp+" ");
+			}
+			
+		}
+
+
+}
